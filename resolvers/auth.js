@@ -1,8 +1,7 @@
-const { gql } = require('apollo-server-express');
 const shortid = require('shortid');
 const { authCheck } = require('../helpers/auth');
 const User = require('../models/user');
-const { DateTimeResolver } = require('graphql-scalars');
+// const { DateTimeResolver } = require('graphql-scalars');
 
 const profile = async (parent, args, { req }) => {
     const currentUser = await authCheck(req);
